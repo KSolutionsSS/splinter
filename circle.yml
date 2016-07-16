@@ -5,17 +5,10 @@ machine:
       ANDROID_HOME: /usr/local/android-sdk-linux
 
 dependencies:
-    override:
-        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-23.0.3,android-24
-        - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+  override:
+    - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-23.0.3,android-24
+    - ./gradlew dependencies
 
-#        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-23.0.3,android-24,extra-google-m2repository,extra-google-google_play_services,extra-android-support
-#  environment:
-#    ANDROID_HOME: /usr/local/android-sdk-linux
-#
-#dependencies:
-#  pre:
-#    - cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/android-sdk-license $ANDROID_HOME
-#    - cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/android-sdk-preview-license $ANDROID_HOME
-#  post:
-#    - echo y | android update sdk --no-ui --filter "platform-tools,build-tools-23.0.3"
+test:
+  override:
+    - ./gradlew app:build
