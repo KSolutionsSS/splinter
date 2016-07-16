@@ -1,8 +1,8 @@
 machine:
   java:
     version: openjdk8
-    environment:
-        ANDROID_HOME: /usr/local/android-sdk-linux
+  environment:
+      ANDROID_HOME: /usr/local/android-sdk-linux
 
 dependencies:
     override:
