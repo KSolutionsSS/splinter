@@ -9,5 +9,5 @@ dependencies:
 #  pre:
 #    - cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/android-sdk-license $ANDROID_HOME
 #    - cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/android-sdk-preview-license $ANDROID_HOME
-  post:
-    - android update sdk --no-ui --filter "platform-tools,build-tools-23.0.3"
+#  post:
+#    - echo y | android update sdk --no-ui --filter "platform-tools,build-tools-23.0.3"
