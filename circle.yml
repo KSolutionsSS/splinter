@@ -2,10 +2,10 @@ machine:
   java:
     version: openjdk8
 
-  environment:
-    ANDROID_HOME: /usr/local/android-sdk-linux
-
-dependencies:
+#  environment:
+#    ANDROID_HOME: /usr/local/android-sdk-linux
+#
+#dependencies:
 #  pre:
 #    - cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/android-sdk-license $ANDROID_HOME
 #    - cp -r ${HOME}/${CIRCLE_PROJECT_REPONAME}/android-sdk-preview-license $ANDROID_HOME
